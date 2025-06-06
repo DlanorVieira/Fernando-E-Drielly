@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá de Panela - Fernando & Drielly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Chá de Panela</h1>
+        <h2>Fernando & Drielly</h2>
+    </header>
+
+    <main>
+        <div class="presentes-container" id="presentesContainer">
+            <!-- Os presentes serão adicionados aqui via JavaScript -->
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Reservar Presente</h3>
+            <p id="presenteSelecionado"></p>
+            <input type="text" id="nomePessoa" placeholder="Seu nome">
+            <button onclick="reservarPresente()">Confirmar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sheetjs/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -82,19 +82,18 @@ function reservarPresente() {
 // Função para salvar no Google Sheets
 async function salvarNoGoogleSheets(presente) {
     try {
-        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}!A:D:append?valueInputOption=USER_ENTERED`, {
+        const response = await fetch('https://sheetdb.io/api/v1/2pg690zy0cbyc', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer SEU_TOKEN_AQUI' // Você precisará configurar a autenticação
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                values: [[
-                    presente.id,
-                    presente.nome,
-                    presente.reservadoPor,
-                    new Date().toISOString()
-                ]]
+                data: [{
+                    id: presente.id,
+                    nome: presente.nome,
+                    reservadoPor: presente.reservadoPor,
+                    data: new Date().toISOString()
+                }]
             })
         });
 

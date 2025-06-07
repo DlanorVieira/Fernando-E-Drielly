@@ -82,26 +82,37 @@ function reservarPresente() {
 // Função para salvar no Google Sheets
 async function salvarNoGoogleSheets(presente) {
     try {
+        console.log('Enviando dados:', presente); // Log para debug
+        
+        const dados = {
+            data: [{
+                ID: presente.id.toString(),
+                Presente: presente.nome,
+                ReservadoPor: presente.reservadoPor,
+                Data: new Date().toISOString()
+            }]
+        };
+        
+        console.log('Dados formatados:', dados); // Log para debug
+
         const response = await fetch('https://sheetdb.io/api/v1/2pg690zy0cbyc', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                data: [{
-                    id: presente.id,
-                    nome: presente.nome,
-                    reservadoPor: presente.reservadoPor,
-                    data: new Date().toISOString()
-                }]
-            })
+            body: JSON.stringify(dados)
         });
 
+        const responseData = await response.json();
+        console.log('Resposta do servidor:', responseData); // Log para debug
+
         if (!response.ok) {
-            throw new Error('Erro ao salvar no Google Sheets');
+            throw new Error('Erro ao salvar no Google Sheets: ' + JSON.stringify(responseData));
         }
+
+        alert('Presente reservado com sucesso!');
     } catch (error) {
-        console.error('Erro:', error);
+        console.error('Erro detalhado:', error);
         alert('Erro ao salvar a reserva. Por favor, tente novamente.');
     }
 }

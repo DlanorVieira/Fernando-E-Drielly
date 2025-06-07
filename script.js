@@ -136,8 +136,8 @@ const presentes = [
     },
     {
         id: 17,
-        nome: 'Batedor de Bolo',
-        descricao: 'Batedor Manual',
+        nome: 'Batedeira de Bolo',
+        descricao: 'Batedeira',
         imagem: 'Imagens/BatedorDeBolo.jpg',
         reservado: false,
         reservadoPor: ''
@@ -200,8 +200,8 @@ const presentes = [
     },
     {
         id: 25,
-        nome: 'Coador',
-        descricao: 'Coador',
+        nome: 'Peneira',
+        descricao: 'Peneira',
         imagem: 'Imagens/Coador.jpg',
         reservado: false,
         reservadoPor: ''
@@ -224,8 +224,8 @@ const presentes = [
     },
     {
         id: 28,
-        nome: 'Cortador de Alimentos',
-        descricao: 'Cortador de Alimentos',
+        nome: 'Cortador de Pizza',
+        descricao: 'Cortador de Pizza',
         imagem: 'Imagens/Cortador.jpg',
         reservado: false,
         reservadoPor: ''
@@ -288,8 +288,8 @@ const presentes = [
     },
     {
         id: 36,
-        nome: 'Saco de Sacolas',
-        descricao: 'Saco de Sacolas',
+        nome: 'Puxa Saco',
+        descricao: 'Puxa Saco',
         imagem: 'Imagens/GuardaSaco.jpg',
         reservado: false,
         reservadoPor: ''

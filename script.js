@@ -82,48 +82,46 @@ function reservarPresente() {
 // Função para salvar no Google Sheets
 async function salvarNoGoogleSheets(presente) {
     try {
+        // Formato simplificado dos dados
         const dados = {
             data: [{
-                ID: presente.id.toString(),
+                ID: presente.id,
                 Presente: presente.nome,
                 ReservadoPor: presente.reservadoPor,
-                Data: new Date().toISOString()
+                Data: new Date().toLocaleDateString('pt-BR')
             }]
         };
 
-        console.log('Tentando enviar dados para o SheetDB...');
-        
+        console.log('Dados a serem enviados:', dados);
+
         const response = await fetch('https://sheetdb.io/api/v1/2pg690zy0cbyc', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(dados)
         });
 
-        console.log('Status da resposta:', response.status);
+        // Log da resposta completa
+        console.log('Status:', response.status);
+        console.log('Headers:', response.headers);
         
+        const responseText = await response.text();
+        console.log('Resposta:', responseText);
+
         if (!response.ok) {
-            const errorText = await response.text();
-            console.error('Resposta de erro:', errorText);
-            throw new Error(`Erro HTTP: ${response.status} - ${errorText}`);
+            throw new Error(`Erro ${response.status}: ${responseText}`);
         }
 
-        const responseData = await response.json();
-        console.log('Resposta do servidor:', responseData);
-
-        // Atualiza o estado local
+        // Se chegou aqui, deu tudo certo
         presente.reservado = true;
         presente.reservadoPor = dados.data[0].ReservadoPor;
-        
-        // Atualiza a interface
         carregarPresentes();
         
         alert('Presente reservado com sucesso!');
     } catch (error) {
-        console.error('Erro completo:', error);
-        alert('Erro ao salvar a reserva. Por favor, tente novamente. Detalhes no console (F12)');
+        console.error('Erro:', error);
+        alert('Erro ao salvar. Por favor, verifique o console (F12) e me informe o erro exato.');
     }
 }
 

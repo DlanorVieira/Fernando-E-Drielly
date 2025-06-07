@@ -4,22 +4,457 @@ const SHEET_NAME = 'Presentes';
 
 // Lista de presentes (você pode adicionar mais itens aqui)
 const presentes = [
+
     {
         id: 1,
         nome: 'Jogo de Panelas',
-        descricao: 'Conjunto de panelas antiaderentes',
-        imagem: 'imagens/panelas.jpg',
+        descricao: 'Conjunto com 5 peças',
+        imagem: 'imagens/JogoDePanelas.jpg',
+        reservado: false,
+        reservadoPor: ''
+
+    },
+    {
+        id: 2,
+        nome: 'Air Fryer',
+        descricao: 'Air Fryer',
+        imagem: 'imagens/AirFryer.jpg',
         reservado: false,
         reservadoPor: ''
     },
     {
-        id: 2,
-        nome: 'Mixer',
-        descricao: 'Mixer 2 em 1 com processador',
-        imagem: 'imagens/mixer.jpg',
+        id: 3,
+        nome: 'Copos de vidro',
+        descricao: 'Copos de vidro',
+        imagem: 'imagens/CoposDeVidro.jpg',
         reservado: false,
         reservadoPor: ''
-    }
+    },
+    {
+        id: 4,
+        nome: 'Panela Elétrica',
+        descricao: 'Panela Elétrica Arroz',
+        imagem: 'imagens/PanelaEletricaDeArroz.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 5,
+        nome: 'Cafeteira',
+        descricao: 'Cafeteira Elétrica',
+        imagem: 'imagens/Cafeteira.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 6,
+        nome: 'Liquidificador',
+        descricao: 'Liquidificador Mondial',
+        imagem: 'imagens/Liquidificador.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 7,
+        nome: 'Toalha de Prato',
+        descricao: 'Toalha de Prato',
+        imagem: 'imagens/ToalhaDePrato.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 8,
+        nome: 'Jogo de Talheres',
+        descricao: 'Conjunto com 24 peças',
+        imagem: 'imagens/Talher.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 9,
+        nome: 'Bandeja de Inox',
+        descricao: 'Conjunto com 6 peças',
+        imagem: 'imagens/BandejaDeAluminio.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 10,
+        nome: 'Jogo de Taças',
+        descricao: 'Conjunto com 6 peças',
+        imagem: 'imagens/Taças.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 11,
+        nome: 'Misteira',
+        descricao: 'Conjunto com 6 peças',
+        imagem: 'imagens/Misteira.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 12,
+        nome: 'Escorredor de Louça',
+        descricao: 'Escorredor de Louça Plástico',
+        imagem: 'imagens/EscorredorDeLouca.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 13,
+        nome: 'Escorredor de Arroz',
+        descricao: 'Escorredor de Arroz em Inox',
+        imagem: 'imagens/EscorredorDeArrozInox.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 14,
+        nome: 'Utensílios de Cozinha',
+        descricao: 'Kit com 5 peças',
+        imagem: 'imagens/Utensilios.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 15,
+        nome: 'Fatiador de Legumes',
+        descricao: 'Fatiador Manual',
+        imagem: 'imagens/Fatiador.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 16,
+        nome: 'Ralador',
+        descricao: 'Ralador 4 em 1',
+        imagem: 'imagens/Ralador.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 17,
+        nome: 'Batedor de Bolo',
+        descricao: 'Batedor Manual',
+        imagem: 'imagens/BatedorDeBolo.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 18,
+        nome: 'Tesoura de Cozinha',
+        descricao: 'Tesoura Inox',
+        imagem: 'imagens/Tesoura.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 19,
+        nome: 'Tábua de Cortar',
+        descricao: 'Tábua de Plástico',
+        imagem: 'imagens/TabuaDeCortar.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 20,
+        nome: 'Rolo de Massa',
+        descricao: 'Rolo de Massa em Madeira',
+        imagem: 'imagens/RoloDeMassa.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 21,
+        nome: 'Batedor de Ovos',
+        descricao: 'Batedor de Ovos',
+        imagem: 'imagens/BatedorDeClara.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 22,
+        nome: 'Canecão',
+        descricao: 'Canecão',
+        imagem: 'imagens/Canecao.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 23,
+        nome: 'Chaleira',
+        descricao: 'Chaleira',
+        imagem: 'imagens/Chaleira.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 24,
+        nome: 'Marinex',
+        descricao: 'Marinex',
+        imagem: 'imagens/Marinex.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 25,
+        nome: 'Coador',
+        descricao: 'Coador',
+        imagem: 'imagens/Coador.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 26,
+        nome: 'Colher de Pau',
+        descricao: 'Colher de Pau',
+        imagem: 'imagens/ColherDePau.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 27,
+        nome: 'Concha de Feijão',
+        descricao: 'Concha de Feijão',
+        imagem: 'imagens/ConchaDeFeijao.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 28,
+        nome: 'Cortador de Alimentos',
+        descricao: 'Cortador de Alimentos',
+        imagem: 'imagens/Cortador.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 29,
+        nome: 'Espátula de Bolo',
+        descricao: 'Espátula de Bolo',
+        imagem: 'imagens/EspatulaDeBolo.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 30,
+        nome: 'Espremedor de Laranja',
+        descricao: 'Espremedor de Laranja',
+        imagem: 'imagens/EspremedorDeLaranja.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 31,
+        nome: 'Ferro de Passar Roupas',
+        descricao: 'Ferro de Passar Roupas',
+        imagem: 'imagens/FerroDePassar.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 32,
+        nome: 'Forma de Bolo',
+        descricao: 'Forma de Bolo',
+        imagem: 'imagens/FormaDeBolo.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 33,
+        nome: 'Forma de Gelo',
+        descricao: 'Forma de Gelo',
+        imagem: 'imagens/FormaDeGelo.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 34,
+        nome: 'Frigideira Antiaderente',
+        descricao: 'Frigideira Antiaderente',
+        imagem: 'imagens/Frigideira.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 35,
+        nome: 'Garrafa de Café',
+        descricao: 'Garrafa de Café',
+        imagem: 'imagens/GarrafaDeCafe.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 36,
+        nome: 'Saco de Sacolas',
+        descricao: 'Saco de Sacolas',
+        imagem: 'imagens/GuardaSaco.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 37,
+        nome: 'Jarra de Suco',
+        descricao: 'Jarra de Suco',
+        imagem: 'imagens/JarraDeSuco.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 38,
+        nome: 'Lixeira de Plástico',
+        descricao: 'Lixeira de Plástico',
+        imagem: 'imagens/Lixeira.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 39,
+        nome: 'Panela de Pressão',
+        descricao: 'Panela de Pressão',
+        imagem: 'imagens/PanelaDePressao.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 40,
+        nome: 'Pegador de Macarrão',
+        descricao: 'Pegador de Macarrão',
+        imagem: 'imagens/PegadorDeMacarrao.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 41,
+        nome: 'Triturador de Alimentos',
+        descricao: 'Triturador de Alimentos',
+        imagem: 'imagens/PequenoFatiadorDeLegumes.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 42,
+        nome: 'Porta mussarela e presunto',
+        descricao: 'Porta mussarela e presunto',
+        imagem: 'imagens/PortaQjMussa.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 43,
+        nome: 'Porta Tempeiro',
+        descricao: 'Porta Tempeiro',
+        imagem: 'imagens/PortaTempeiro.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 44,
+        nome: 'Potes de Plástico',
+        descricao: 'Potes de plástico',
+        imagem: 'imagens/potes.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 45,
+        nome: 'Pote de Hermétrico',
+        descricao: 'Pote de Hermétrico',
+        imagem: 'imagens/potesAlimentos.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 46,
+        nome: 'Potes Hermétricos Isolados',
+        descricao: 'Potes Hermétricos Isolados',
+        imagem: 'imagens/potesIsolado.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 47,
+        nome: 'Pratos',
+        descricao: 'Pratos',
+        imagem: 'imagens/PratosDeArmario.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 48,
+        nome: 'Pratos',
+        descricao: 'Pratos',
+        imagem: 'imagens/PratosDeArmario2.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 49,
+        nome: 'Rodo De Pia',
+        descricao: 'Rodo de Pia',
+        imagem: 'imagens/RoloDePia.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 50,
+        nome: 'Saleiro',
+        descricao: 'Saleiro',
+        imagem: 'imagens/Saleiro.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 51,
+        nome: 'Taças de Vidro',
+        descricao: 'Taças de Vidro',
+        imagem: 'imagens/tacas.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 52,
+        nome: 'Taças de Vidro',
+        descricao: 'Taças de Vidro',
+        imagem: 'imagens/Taças.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 53,
+        nome: 'Taças de Vidro',
+        descricao: 'Taças de Vidro',
+        imagem: 'imagens/tacas2.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 54,
+        nome: 'Toalhas de banho e rosto',
+        descricao: 'Toalhas de banho e rosto',
+        imagem: 'imagens/Toalha.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 55,
+        nome: 'Pratos Tradicionais',
+        descricao: 'Pratos Tradicionais',
+        imagem: 'imagens/PratosTradicionais.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    {
+        id: 56,
+        nome: 'Xícaras de Café',
+        descricao: 'Xícaras de Café',
+        imagem: 'imagens/Xicaras.jpg',
+        reservado: false,
+        reservadoPor: ''
+    },
+    
 ];
 
 let presenteSelecionado = null;

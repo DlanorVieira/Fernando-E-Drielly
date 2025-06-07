@@ -89,7 +89,7 @@ const presentes = [
     {
         id: 11,
         nome: 'Misteira',
-        descricao: 'Conjunto com 6 peças',
+        descricao: 'Misteira',
         imagem: 'Imagens/Misteira.jpg',
         reservado: false,
         reservadoPor: ''
@@ -400,14 +400,6 @@ const presentes = [
     },
     {
         id: 50,
-        nome: 'Saleiro',
-        descricao: 'Saleiro',
-        imagem: 'Imagens/Saleiro.jpg',
-        reservado: false,
-        reservadoPor: ''
-    },
-    {
-        id: 51,
         nome: 'Taças de Vidro',
         descricao: 'Taças de Vidro',
         imagem: 'Imagens/tacas.jpg',
@@ -415,7 +407,7 @@ const presentes = [
         reservadoPor: ''
     },
     {
-        id: 52,
+        id: 51,
         nome: 'Taças de Vidro',
         descricao: 'Taças de Vidro',
         imagem: 'Imagens/Taças.jpg',
@@ -424,14 +416,6 @@ const presentes = [
     },
     {
         id: 53,
-        nome: 'Taças de Vidro',
-        descricao: 'Taças de Vidro',
-        imagem: 'Imagens/tacas2.jpg',
-        reservado: false,
-        reservadoPor: ''
-    },
-    {
-        id: 54,
         nome: 'Toalhas de banho e rosto',
         descricao: 'Toalhas de banho e rosto',
         imagem: 'Imagens/Toalha.jpg',
@@ -439,7 +423,7 @@ const presentes = [
         reservadoPor: ''
     },
     {
-        id: 55,
+        id: 54,
         nome: 'Pratos Tradicionais',
         descricao: 'Pratos Tradicionais',
         imagem: 'Imagens/PratosTradicionais.jpg',
@@ -447,7 +431,7 @@ const presentes = [
         reservadoPor: ''
     },
     {
-        id: 56,
+        id: 55,
         nome: 'Xícaras de Café',
         descricao: 'Xícaras de Café',
         imagem: 'Imagens/Xicaras.jpg',

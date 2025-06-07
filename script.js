@@ -1,5 +1,5 @@
 // Configuração do Google Sheets
-const SHEET_ID = '1L6f7oF9HdANPJXDvwQq1q74hfNuW7ep6D6JTiWAAlkI'; // Você precisará substituir pelo ID do seu Google Sheet
+const SHEET_ID = '2pg690zy0cbyc';
 const SHEET_NAME = 'Presentes';
 
 // Lista de presentes (você pode adicionar mais itens aqui)
@@ -8,22 +8,48 @@ const presentes = [
         id: 1,
         nome: 'Jogo de Panelas',
         descricao: 'Conjunto de panelas antiaderentes',
-        imagem: 'imagens/PanelaDePressao.jpg',
+        imagem: 'imagens/panelas.jpg',
         reservado: false,
         reservadoPor: ''
     },
     {
         id: 2,
-        nome: 'Saleiro',
-        descricao: 'Saleiro',
-        imagem: 'imagens/Saleiro.jpg',
+        nome: 'Mixer',
+        descricao: 'Mixer 2 em 1 com processador',
+        imagem: 'imagens/mixer.jpg',
         reservado: false,
         reservadoPor: ''
-    },
-    // Adicione mais presentes aqui
+    }
 ];
 
 let presenteSelecionado = null;
+
+// Função para carregar os presentes do Google Sheets
+async function carregarPresentesDoGoogleSheets() {
+    try {
+        const response = await fetch(`https://sheetdb.io/api/v1/${SHEET_ID}`);
+        if (!response.ok) {
+            throw new Error('Erro ao carregar dados');
+        }
+        
+        const data = await response.json();
+        console.log('Dados carregados:', data);
+        
+        // Atualiza o estado local dos presentes
+        data.forEach(item => {
+            const presente = presentes.find(p => p.id.toString() === item.ID);
+            if (presente) {
+                presente.reservado = true;
+                presente.reservadoPor = item.ReservadoPor;
+            }
+        });
+        
+        // Atualiza a interface
+        carregarPresentes();
+    } catch (error) {
+        console.error('Erro ao carregar dados:', error);
+    }
+}
 
 // Função para carregar os presentes
 function carregarPresentes() {
@@ -58,60 +84,34 @@ function carregarPresentes() {
 
 // Função para selecionar um presente
 function selecionarPresente(id) {
-    presenteSelecionado = presentes.find(p => p.id === id);
+    const presente = presentes.find(p => p.id === id);
+    if (presente && presente.reservado) {
+        alert('Este presente já foi reservado!');
+        return;
+    }
+    
+    presenteSelecionado = presente;
     document.getElementById('presenteSelecionado').textContent = 
         `Você está reservando: ${presenteSelecionado.nome}`;
     document.getElementById('modal').style.display = 'block';
 }
 
-// Função para reservar o presente
-function reservarPresente() {
-    const nome = document.getElementById('nomePessoa').value.trim();
-    
-    if (!nome) {
-        alert('Por favor, digite seu nome!');
-        return;
-    }
-
-    if (presenteSelecionado) {
-        presenteSelecionado.reservado = true;
-        presenteSelecionado.reservadoPor = nome;
-        
-        // Aqui você pode adicionar a lógica para salvar no Google Sheets
-        salvarNoGoogleSheets(presenteSelecionado);
-        
-        // Fecha o modal e recarrega os presentes
-        document.getElementById('modal').style.display = 'none';
-        document.getElementById('nomePessoa').value = '';
-        carregarPresentes();
-    }
-}
-
-// Função para carregar os presentes do Google Sheets
-async function carregarPresentesDoGoogleSheets() {
-    try {
-        const response = await fetch('https://sheetdb.io/api/v1/2pg690zy0cbyc');
-        const data = await response.json();
-        
-        // Atualiza o estado local dos presentes
-        data.forEach(item => {
-            const presente = presentes.find(p => p.id.toString() === item.ID);
-            if (presente) {
-                presente.reservado = true;
-                presente.reservadoPor = item.ReservadoPor;
-            }
-        });
-        
-        // Atualiza a interface
-        carregarPresentes();
-    } catch (error) {
-        console.error('Erro ao carregar dados:', error);
-    }
-}
-
 // Função para salvar no Google Sheets
 async function salvarNoGoogleSheets(presente) {
     try {
+        // Verifica novamente se o presente já está reservado
+        const response = await fetch(`https://sheetdb.io/api/v1/${SHEET_ID}`);
+        const data = await response.json();
+        const presenteJaReservado = data.some(item => 
+            item.ID === presente.id.toString() && item.ReservadoPor
+        );
+
+        if (presenteJaReservado) {
+            alert('Este presente já foi reservado por outra pessoa!');
+            await carregarPresentesDoGoogleSheets();
+            return;
+        }
+
         const dados = {
             data: [{
                 ID: presente.id,
@@ -121,9 +121,7 @@ async function salvarNoGoogleSheets(presente) {
             }]
         };
 
-        console.log('Dados a serem enviados:', dados);
-
-        const response = await fetch('https://sheetdb.io/api/v1/2pg690zy0cbyc', {
+        const saveResponse = await fetch(`https://sheetdb.io/api/v1/${SHEET_ID}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -131,9 +129,8 @@ async function salvarNoGoogleSheets(presente) {
             body: JSON.stringify(dados)
         });
 
-        if (!response.ok) {
-            const responseText = await response.text();
-            throw new Error(`Erro ${response.status}: ${responseText}`);
+        if (!saveResponse.ok) {
+            throw new Error('Erro ao salvar no Google Sheets');
         }
 
         // Atualiza o estado local
@@ -146,7 +143,7 @@ async function salvarNoGoogleSheets(presente) {
         alert('Presente reservado com sucesso!');
     } catch (error) {
         console.error('Erro:', error);
-        alert('Erro ao salvar. Por favor, verifique o console (F12) e me informe o erro exato.');
+        alert('Erro ao salvar. Por favor, tente novamente.');
     }
 }
 
@@ -163,11 +160,11 @@ window.onclick = function(event) {
     }
 }
 
-// Atualiza os presentes a cada 10 segundos
-setInterval(carregarPresentesDoGoogleSheets, 10000);
+// Atualiza os presentes a cada 5 segundos
+setInterval(carregarPresentesDoGoogleSheets, 5000);
 
 // Carrega os presentes quando a página carregar
 document.addEventListener('DOMContentLoaded', () => {
     carregarPresentes();
-    carregarPresentesDoGoogleSheets(); // Carrega os dados iniciais
+    carregarPresentesDoGoogleSheets();
 }); 

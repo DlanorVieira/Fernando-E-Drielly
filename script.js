@@ -87,10 +87,31 @@ function reservarPresente() {
     }
 }
 
+// Função para carregar os presentes do Google Sheets
+async function carregarPresentesDoGoogleSheets() {
+    try {
+        const response = await fetch('https://sheetdb.io/api/v1/2pg690zy0cbyc');
+        const data = await response.json();
+        
+        // Atualiza o estado local dos presentes
+        data.forEach(item => {
+            const presente = presentes.find(p => p.id.toString() === item.ID);
+            if (presente) {
+                presente.reservado = true;
+                presente.reservadoPor = item.ReservadoPor;
+            }
+        });
+        
+        // Atualiza a interface
+        carregarPresentes();
+    } catch (error) {
+        console.error('Erro ao carregar dados:', error);
+    }
+}
+
 // Função para salvar no Google Sheets
 async function salvarNoGoogleSheets(presente) {
     try {
-        // Formato simplificado dos dados
         const dados = {
             data: [{
                 ID: presente.id,
@@ -110,20 +131,16 @@ async function salvarNoGoogleSheets(presente) {
             body: JSON.stringify(dados)
         });
 
-        // Log da resposta completa
-        console.log('Status:', response.status);
-        console.log('Headers:', response.headers);
-        
-        const responseText = await response.text();
-        console.log('Resposta:', responseText);
-
         if (!response.ok) {
+            const responseText = await response.text();
             throw new Error(`Erro ${response.status}: ${responseText}`);
         }
 
-        // Se chegou aqui, deu tudo certo
+        // Atualiza o estado local
         presente.reservado = true;
         presente.reservadoPor = dados.data[0].ReservadoPor;
+        
+        // Atualiza a interface
         carregarPresentes();
         
         alert('Presente reservado com sucesso!');
@@ -146,5 +163,11 @@ window.onclick = function(event) {
     }
 }
 
-// Carregar os presentes quando a página carregar
-document.addEventListener('DOMContentLoaded', carregarPresentes); 
+// Atualiza os presentes a cada 10 segundos
+setInterval(carregarPresentesDoGoogleSheets, 10000);
+
+// Carrega os presentes quando a página carregar
+document.addEventListener('DOMContentLoaded', () => {
+    carregarPresentes();
+    carregarPresentesDoGoogleSheets(); // Carrega os dados iniciais
+}); 

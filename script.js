@@ -160,8 +160,27 @@ window.onclick = function(event) {
     }
 }
 
-// Atualiza os presentes a cada 5 segundos
-setInterval(carregarPresentesDoGoogleSheets, 5000);
+// Função para reservar o presente
+function reservarPresente() {
+    const nome = document.getElementById('nomePessoa').value.trim();
+    
+    if (!nome) {
+        alert('Por favor, digite seu nome!');
+        return;
+    }
+
+    if (presenteSelecionado) {
+        presenteSelecionado.reservadoPor = nome;
+        salvarNoGoogleSheets(presenteSelecionado);
+        
+        // Fecha o modal e limpa o campo
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('nomePessoa').value = '';
+    }
+}
+
+// Atualiza os presentes a cada 1 minuto
+setInterval(carregarPresentesDoGoogleSheets, 60000);
 
 // Carrega os presentes quando a página carregar
 document.addEventListener('DOMContentLoaded', () => {

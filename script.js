@@ -40,9 +40,17 @@ function carregarPresentes() {
             <p>${presente.descricao}</p>
             ${presente.reservado 
                 ? `<p class="reservado-por">Reservado por: ${presente.reservadoPor}</p>`
-                : `<button onclick="selecionarPresente(${presente.id})">Reservar</button>`
+                : `<button onclick="selecionarPresente(${presente.id})" ${presente.reservado ? 'disabled' : ''}>Reservar</button>`
             }
         `;
+        
+        // Se o presente estiver reservado, adiciona um overlay
+        if (presente.reservado) {
+            const overlay = document.createElement('div');
+            overlay.className = 'reservado-overlay';
+            overlay.innerHTML = '<span>RESERVADO</span>';
+            card.appendChild(overlay);
+        }
         
         container.appendChild(card);
     });

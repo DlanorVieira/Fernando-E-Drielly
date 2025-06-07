@@ -9,7 +9,7 @@ const presentes = [
         id: 1,
         nome: 'Jogo de Panelas',
         descricao: 'Conjunto com 5 peças',
-        imagem: 'imagens/JogoDePanelas.jpg',
+        imagem: 'Imagens/JogoDePanelas.jpg',
         reservado: false,
         reservadoPor: ''
 
@@ -18,7 +18,7 @@ const presentes = [
         id: 2,
         nome: 'Air Fryer',
         descricao: 'Air Fryer',
-        imagem: 'imagens/AirFryer.jpg',
+        imagem: 'Imagens/AirFryer.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -26,7 +26,7 @@ const presentes = [
         id: 3,
         nome: 'Copos de vidro',
         descricao: 'Copos de vidro',
-        imagem: 'imagens/CoposDeVidro.jpg',
+        imagem: 'Imagens/CoposDeVidro.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -34,7 +34,7 @@ const presentes = [
         id: 4,
         nome: 'Panela Elétrica',
         descricao: 'Panela Elétrica Arroz',
-        imagem: 'imagens/PanelaEletricaDeArroz.jpg',
+        imagem: 'Imagens/PanelaEletricaDeArroz.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -42,7 +42,7 @@ const presentes = [
         id: 5,
         nome: 'Cafeteira',
         descricao: 'Cafeteira Elétrica',
-        imagem: 'imagens/Cafeteira.jpg',
+        imagem: 'Imagens/Cafeteira.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -50,7 +50,7 @@ const presentes = [
         id: 6,
         nome: 'Liquidificador',
         descricao: 'Liquidificador Mondial',
-        imagem: 'imagens/Liquidificador.jpg',
+        imagem: 'Imagens/Liquidificador.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -58,7 +58,7 @@ const presentes = [
         id: 7,
         nome: 'Toalha de Prato',
         descricao: 'Toalha de Prato',
-        imagem: 'imagens/ToalhaDePrato.jpg',
+        imagem: 'Imagens/ToalhaDePrato.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -66,7 +66,7 @@ const presentes = [
         id: 8,
         nome: 'Jogo de Talheres',
         descricao: 'Conjunto com 24 peças',
-        imagem: 'imagens/Talher.jpg',
+        imagem: 'Imagens/Talher.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -74,7 +74,7 @@ const presentes = [
         id: 9,
         nome: 'Bandeja de Inox',
         descricao: 'Conjunto com 6 peças',
-        imagem: 'imagens/BandejaDeAluminio.jpg',
+        imagem: 'Imagens/BandejaDeAluminio.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -82,7 +82,7 @@ const presentes = [
         id: 10,
         nome: 'Jogo de Taças',
         descricao: 'Conjunto com 6 peças',
-        imagem: 'imagens/Taças.jpg',
+        imagem: 'Imagens/Taças.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -90,7 +90,7 @@ const presentes = [
         id: 11,
         nome: 'Misteira',
         descricao: 'Conjunto com 6 peças',
-        imagem: 'imagens/Misteira.jpg',
+        imagem: 'Imagens/Misteira.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -98,7 +98,7 @@ const presentes = [
         id: 12,
         nome: 'Escorredor de Louça',
         descricao: 'Escorredor de Louça Plástico',
-        imagem: 'imagens/EscorredorDeLouca.jpg',
+        imagem: 'Imagens/EscorredorDeLouca.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -106,7 +106,7 @@ const presentes = [
         id: 13,
         nome: 'Escorredor de Arroz',
         descricao: 'Escorredor de Arroz em Inox',
-        imagem: 'imagens/EscorredorDeArrozInox.jpg',
+        imagem: 'Imagens/EscorredorDeArrozInox.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -114,7 +114,7 @@ const presentes = [
         id: 14,
         nome: 'Utensílios de Cozinha',
         descricao: 'Kit com 5 peças',
-        imagem: 'imagens/Utensilios.jpg',
+        imagem: 'Imagens/Utensilios.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -122,7 +122,7 @@ const presentes = [
         id: 15,
         nome: 'Fatiador de Legumes',
         descricao: 'Fatiador Manual',
-        imagem: 'imagens/Fatiador.jpg',
+        imagem: 'Imagens/Fatiador.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -130,7 +130,7 @@ const presentes = [
         id: 16,
         nome: 'Ralador',
         descricao: 'Ralador 4 em 1',
-        imagem: 'imagens/Ralador.jpg',
+        imagem: 'Imagens/Ralador.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -138,7 +138,7 @@ const presentes = [
         id: 17,
         nome: 'Batedor de Bolo',
         descricao: 'Batedor Manual',
-        imagem: 'imagens/BatedorDeBolo.jpg',
+        imagem: 'Imagens/BatedorDeBolo.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -146,7 +146,7 @@ const presentes = [
         id: 18,
         nome: 'Tesoura de Cozinha',
         descricao: 'Tesoura Inox',
-        imagem: 'imagens/Tesoura.jpg',
+        imagem: 'Imagens/Tesoura.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -154,7 +154,7 @@ const presentes = [
         id: 19,
         nome: 'Tábua de Cortar',
         descricao: 'Tábua de Plástico',
-        imagem: 'imagens/TabuaDeCortar.jpg',
+        imagem: 'Imagens/TabuaDeCortar.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -162,7 +162,7 @@ const presentes = [
         id: 20,
         nome: 'Rolo de Massa',
         descricao: 'Rolo de Massa em Madeira',
-        imagem: 'imagens/RoloDeMassa.jpg',
+        imagem: 'Imagens/RoloDeMassa.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -170,7 +170,7 @@ const presentes = [
         id: 21,
         nome: 'Batedor de Ovos',
         descricao: 'Batedor de Ovos',
-        imagem: 'imagens/BatedorDeClara.jpg',
+        imagem: 'Imagens/BatedorDeClara.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -178,7 +178,7 @@ const presentes = [
         id: 22,
         nome: 'Canecão',
         descricao: 'Canecão',
-        imagem: 'imagens/Canecao.jpg',
+        imagem: 'Imagens/Canecao.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -186,7 +186,7 @@ const presentes = [
         id: 23,
         nome: 'Chaleira',
         descricao: 'Chaleira',
-        imagem: 'imagens/Chaleira.jpg',
+        imagem: 'Imagens/Chaleira.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -194,7 +194,7 @@ const presentes = [
         id: 24,
         nome: 'Marinex',
         descricao: 'Marinex',
-        imagem: 'imagens/Marinex.jpg',
+        imagem: 'Imagens/Marinex.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -202,7 +202,7 @@ const presentes = [
         id: 25,
         nome: 'Coador',
         descricao: 'Coador',
-        imagem: 'imagens/Coador.jpg',
+        imagem: 'Imagens/Coador.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -210,7 +210,7 @@ const presentes = [
         id: 26,
         nome: 'Colher de Pau',
         descricao: 'Colher de Pau',
-        imagem: 'imagens/ColherDePau.jpg',
+        imagem: 'Imagens/ColherDePau.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -218,7 +218,7 @@ const presentes = [
         id: 27,
         nome: 'Concha de Feijão',
         descricao: 'Concha de Feijão',
-        imagem: 'imagens/ConchaDeFeijao.jpg',
+        imagem: 'Imagens/ConchaDeFeijao.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -226,7 +226,7 @@ const presentes = [
         id: 28,
         nome: 'Cortador de Alimentos',
         descricao: 'Cortador de Alimentos',
-        imagem: 'imagens/Cortador.jpg',
+        imagem: 'Imagens/Cortador.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -234,7 +234,7 @@ const presentes = [
         id: 29,
         nome: 'Espátula de Bolo',
         descricao: 'Espátula de Bolo',
-        imagem: 'imagens/EspatulaDeBolo.jpg',
+        imagem: 'Imagens/EspatulaDeBolo.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -242,7 +242,7 @@ const presentes = [
         id: 30,
         nome: 'Espremedor de Laranja',
         descricao: 'Espremedor de Laranja',
-        imagem: 'imagens/EspremedorDeLaranja.jpg',
+        imagem: 'Imagens/EspremedorDeLaranja.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -250,7 +250,7 @@ const presentes = [
         id: 31,
         nome: 'Ferro de Passar Roupas',
         descricao: 'Ferro de Passar Roupas',
-        imagem: 'imagens/FerroDePassar.jpg',
+        imagem: 'Imagens/FerroDePassar.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -258,7 +258,7 @@ const presentes = [
         id: 32,
         nome: 'Forma de Bolo',
         descricao: 'Forma de Bolo',
-        imagem: 'imagens/FormaDeBolo.jpg',
+        imagem: 'Imagens/FormaDeBolo.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -266,7 +266,7 @@ const presentes = [
         id: 33,
         nome: 'Forma de Gelo',
         descricao: 'Forma de Gelo',
-        imagem: 'imagens/FormaDeGelo.jpg',
+        imagem: 'Imagens/FormaDeGelo.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -274,7 +274,7 @@ const presentes = [
         id: 34,
         nome: 'Frigideira Antiaderente',
         descricao: 'Frigideira Antiaderente',
-        imagem: 'imagens/Frigideira.jpg',
+        imagem: 'Imagens/Frigideira.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -282,7 +282,7 @@ const presentes = [
         id: 35,
         nome: 'Garrafa de Café',
         descricao: 'Garrafa de Café',
-        imagem: 'imagens/GarrafaDeCafe.jpg',
+        imagem: 'Imagens/GarrafaDeCafe.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -290,7 +290,7 @@ const presentes = [
         id: 36,
         nome: 'Saco de Sacolas',
         descricao: 'Saco de Sacolas',
-        imagem: 'imagens/GuardaSaco.jpg',
+        imagem: 'Imagens/GuardaSaco.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -298,7 +298,7 @@ const presentes = [
         id: 37,
         nome: 'Jarra de Suco',
         descricao: 'Jarra de Suco',
-        imagem: 'imagens/JarraDeSuco.jpg',
+        imagem: 'Imagens/JarraDeSuco.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -306,7 +306,7 @@ const presentes = [
         id: 38,
         nome: 'Lixeira de Plástico',
         descricao: 'Lixeira de Plástico',
-        imagem: 'imagens/Lixeira.jpg',
+        imagem: 'Imagens/Lixeira.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -314,7 +314,7 @@ const presentes = [
         id: 39,
         nome: 'Panela de Pressão',
         descricao: 'Panela de Pressão',
-        imagem: 'imagens/PanelaDePressao.jpg',
+        imagem: 'Imagens/PanelaDePressao.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -322,7 +322,7 @@ const presentes = [
         id: 40,
         nome: 'Pegador de Macarrão',
         descricao: 'Pegador de Macarrão',
-        imagem: 'imagens/PegadorDeMacarrao.jpg',
+        imagem: 'Imagens/PegadorDeMacarrao.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -330,7 +330,7 @@ const presentes = [
         id: 41,
         nome: 'Triturador de Alimentos',
         descricao: 'Triturador de Alimentos',
-        imagem: 'imagens/PequenoFatiadorDeLegumes.jpg',
+        imagem: 'Imagens/PequenoFatiadorDeLegumes.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -338,7 +338,7 @@ const presentes = [
         id: 42,
         nome: 'Porta mussarela e presunto',
         descricao: 'Porta mussarela e presunto',
-        imagem: 'imagens/PortaQjMussa.jpg',
+        imagem: 'Imagens/PortaQjMussa.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -346,7 +346,7 @@ const presentes = [
         id: 43,
         nome: 'Porta Tempeiro',
         descricao: 'Porta Tempeiro',
-        imagem: 'imagens/PortaTempeiro.jpg',
+        imagem: 'Imagens/PortaTempeiro.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -354,7 +354,7 @@ const presentes = [
         id: 44,
         nome: 'Potes de Plástico',
         descricao: 'Potes de plástico',
-        imagem: 'imagens/potes.jpg',
+        imagem: 'Imagens/potes.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -362,7 +362,7 @@ const presentes = [
         id: 45,
         nome: 'Pote de Hermétrico',
         descricao: 'Pote de Hermétrico',
-        imagem: 'imagens/potesAlimentos.jpg',
+        imagem: 'Imagens/potesAlimentos.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -370,7 +370,7 @@ const presentes = [
         id: 46,
         nome: 'Potes Hermétricos Isolados',
         descricao: 'Potes Hermétricos Isolados',
-        imagem: 'imagens/potesIsolado.jpg',
+        imagem: 'Imagens/potesIsolado.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -378,7 +378,7 @@ const presentes = [
         id: 47,
         nome: 'Pratos',
         descricao: 'Pratos',
-        imagem: 'imagens/PratosDeArmario.jpg',
+        imagem: 'Imagens/PratosDeArmario.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -386,7 +386,7 @@ const presentes = [
         id: 48,
         nome: 'Pratos',
         descricao: 'Pratos',
-        imagem: 'imagens/PratosDeArmario2.jpg',
+        imagem: 'Imagens/PratosDeArmario2.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -394,7 +394,7 @@ const presentes = [
         id: 49,
         nome: 'Rodo De Pia',
         descricao: 'Rodo de Pia',
-        imagem: 'imagens/RoloDePia.jpg',
+        imagem: 'Imagens/RoloDePia.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -402,7 +402,7 @@ const presentes = [
         id: 50,
         nome: 'Saleiro',
         descricao: 'Saleiro',
-        imagem: 'imagens/Saleiro.jpg',
+        imagem: 'Imagens/Saleiro.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -410,7 +410,7 @@ const presentes = [
         id: 51,
         nome: 'Taças de Vidro',
         descricao: 'Taças de Vidro',
-        imagem: 'imagens/tacas.jpg',
+        imagem: 'Imagens/tacas.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -418,7 +418,7 @@ const presentes = [
         id: 52,
         nome: 'Taças de Vidro',
         descricao: 'Taças de Vidro',
-        imagem: 'imagens/Taças.jpg',
+        imagem: 'Imagens/Taças.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -426,7 +426,7 @@ const presentes = [
         id: 53,
         nome: 'Taças de Vidro',
         descricao: 'Taças de Vidro',
-        imagem: 'imagens/tacas2.jpg',
+        imagem: 'Imagens/tacas2.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -434,7 +434,7 @@ const presentes = [
         id: 54,
         nome: 'Toalhas de banho e rosto',
         descricao: 'Toalhas de banho e rosto',
-        imagem: 'imagens/Toalha.jpg',
+        imagem: 'Imagens/Toalha.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -442,7 +442,7 @@ const presentes = [
         id: 55,
         nome: 'Pratos Tradicionais',
         descricao: 'Pratos Tradicionais',
-        imagem: 'imagens/PratosTradicionais.jpg',
+        imagem: 'Imagens/PratosTradicionais.jpg',
         reservado: false,
         reservadoPor: ''
     },
@@ -450,7 +450,7 @@ const presentes = [
         id: 56,
         nome: 'Xícaras de Café',
         descricao: 'Xícaras de Café',
-        imagem: 'imagens/Xicaras.jpg',
+        imagem: 'Imagens/Xicaras.jpg',
         reservado: false,
         reservadoPor: ''
     },

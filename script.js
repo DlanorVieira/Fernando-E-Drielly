@@ -161,7 +161,7 @@ window.onclick = function(event) {
 }
 
 // Função para reservar o presente
-function reservarPresente() {
+window.reservarPresente = function() {
     const nome = document.getElementById('nomePessoa').value.trim();
     
     if (!nome) {
